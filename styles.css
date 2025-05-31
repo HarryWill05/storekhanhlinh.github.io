@@ -1,0 +1,527 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Pacifico', cursive; /* Font chữ dễ thương */
+  background-color: #fff;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #f8d7da;
+  color: #333;
+  padding: 15px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+header .logo {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+header nav a {
+  color: #333;
+  text-decoration: none;
+  margin-left: 20px;
+  font-weight: 500;
+}
+
+header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Banner */
+.banner {
+  background: linear-gradient(135deg, #d0f0fd, #f8d7da);
+  color: #333;
+  text-align: center;
+  padding: 100px 20px;
+}
+
+.banner h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+}
+
+.banner p {
+  font-size: 20px;
+}
+
+/* Products */
+.product-list {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.product-list h2 {
+  font-size: 30px;
+  margin-bottom: 30px;
+  color: #ff7f9c;
+}
+
+.products {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  width: 220px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: scale(0.95); /* Zoom out */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Hình ảnh sản phẩm */
+.product-card img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.05); /* Zoom in ảnh nhẹ khi hover */
+}
+
+/* Tiêu đề sản phẩm */
+.product-card h3 {
+  margin: 12px 0 6px;
+  font-size: 18px;
+  color: #e07a9d;
+}
+
+/* Điều chỉnh vị trí chữ Nike Air Force 1 */
+.product-card:nth-child(2) h3 {
+  margin-top: 20px; /* Đẩy chữ xuống */
+}
+
+/* Giá sản phẩm */
+.product-card p {
+  color: #555;
+  margin-bottom: 12px;
+}
+
+/* Nút "Xem sản phẩm" */
+.product-card button {
+  display: block; /* Luôn có sẵn nhưng sẽ ẩn */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0.8);
+  background-color: #ff7f9c;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.4s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.product-card:hover button {
+  opacity: 1; /* Xuất hiện mềm mại */
+  transform: translate(-50%, -50%) scale(1); /* Hiện ra mượt mà */
+}
+
+/* Xóa viền cho ô Nike Air Force 1 */
+.no-border {
+  border: none !important;
+  outline: none !important;
+}
+
+/* Footer */
+footer {
+  background-color: #f8d7da;
+  color: #555;
+  text-align: center;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+
+/* Giữ nguyên toàn bộ CSS của bạn */
+
+/* Thêm CSS cho hai nút */
+.buttons {
+  display: flex;
+  flex-direction: column; /* Đảm bảo nút xếp dọc */
+  align-items: center; /* Căn giữa */
+}
+
+.add-to-cart {
+  background-color: #ffd700;
+  color: white;
+  padding: 10px;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  margin-top: -30px; /* Đảm bảo nút giỏ hàng nằm riêng biệt dưới */
+}
+
+
+.banner-slider {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    text-align: center;
+}
+
+.slide img {
+    width: 100%;
+    height: 300px; /* Đặt chiều cao cố định */
+    object-fit: cover; /* Cắt ảnh theo tỷ lệ mà không bị méo */
+    border-radius: 10px; /* Bo góc nhẹ để trông đẹp hơn */
+}
+
+
+#brand-filter-container {
+    display: flex;
+    overflow-x: auto; /* Cho phép cuộn ngang */
+    gap: 10px;
+    padding: 10px;
+    white-space: nowrap;
+    scroll-behavior: smooth; /* Cuộn mượt */
+}
+
+.brand-option {
+    cursor: pointer;
+    padding: 5px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brand-option img {
+    width: 80px; /* Điều chỉnh kích thước ảnh */
+    height: auto;
+}
+
+.brand-option:hover {
+    transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+}
+
+#brand-filter-container {
+    display: flex;
+    justify-content: center; /* Căn giữa nếu số lượng ít */
+    overflow-x: auto; /* Cho phép cuộn ngang nếu có nhiều logo */
+    gap: 15px;
+    padding: 10px;
+    white-space: nowrap;
+    scroll-behavior: smooth; /* Cuộn mượt */
+}
+
+/* Đảm bảo logo hiển thị đẹp */
+.brand-option img {
+    width: 80px; /* Kích thước ảnh */
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+}
+
+.brand-option:hover {
+    transform: scale(1.1); /* Hiệu ứng phóng to khi hover */
+}
+
+#filtered-products {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#brand-title {
+    font-size: 24px;
+    color: #ff7f9c;
+    margin-bottom: 15px;
+}
+
+#back-to-home {
+    background-color: #ffd700;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 15px;
+}
+
+#back-to-home:hover {
+    background-color: #e0c200;
+}
+
+#all-products-btn {
+    display: block;
+    margin: 0 auto; /* Căn giữa ngang */
+    text-align: center;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#all-products-btn:hover {
+    background-color: #3e8e41;
+}
+
+#all-products-section h2 {
+    text-align: center; /* Căn giữa chữ */
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: #FADADD; /* Màu hồng pastel */
+    color: #5A5A5A;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+/* Bố cục linh hoạt, tạo sự phân biệt từng phần bằng màu nền hồng đậm */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding-top: 20px;
+}
+
+.footer-section {
+    flex: 1;
+    text-align: left;
+    padding: 15px;
+    background-color: #fea8c0; /* Sử dụng màu hồng đậm thay cho border */
+    color: white; /* Chữ trắng để dễ đọc trên nền đậm */
+}
+
+/* Tiêu đề từng phần */
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid white; /* Viền dưới giúp nổi bật */
+    padding-bottom: 5px;
+}
+
+/* Nội dung */
+.footer-section p, .footer-section ul {
+    font-size: 16px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hiệu ứng icon mạng xã hội */
+.social-icons {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icons img {
+    width: 35px;
+    transition: 0.3s;
+}
+
+.social-icons img:hover {
+    transform: scale(1.1);
+    opacity: 0.8;
+}
+
+#filtered-products {
+    display: block;
+    text-align: center;
+    width: 100%;
+}
+
+#filtered-products .products {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+#messenger-icon {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    z-index: 1000;
+}
+
+#messenger-icon img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s;
+}
+
+#messenger-icon:hover img {
+    transform: scale(1.1);
+}
+
+.banner {
+    text-align: center;
+    position: relative;
+    padding: 40px;
+}
+
+.banner img {
+    max-width: 100px; /* Điều chỉnh kích thước */
+    height: 100px; /* Đảm bảo hình vuông trước khi làm tròn */
+    border-radius: 50%; /* Biến hình ảnh thành hình tròn */
+    object-fit: cover; /* Giữ đúng tỷ lệ mà không bị méo */
+    display: block;
+    margin: 0 auto 15px;
+}
+
+#cart-container {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    z-index: 10; /* Đặt chỉ số z-index cao hơn lớp blur */
+}
+
+
+#cart-items-container {
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.cart-total {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.cart-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.cart-buttons button {
+    flex: 1;
+    margin: 5px;
+    padding: 10px;
+    background: #ff7f9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#continue-shopping {
+    width: 100%;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#cart-items-container {
+    max-height: 200px;
+    overflow-y: auto; /* Cuộn nếu danh sách dài */
+}
+
+
+.blur-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Làm tối nền */
+    backdrop-filter: blur(8px); /* Hiệu ứng làm mờ */
+    z-index: 9; /* Đảm bảo lớp phủ nằm dưới giỏ hàng */
+    display: none;
+}
+
+
+
+#cart-count {
+    background: red;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    position: relative;
+    top: -10px;
+    left: 5px;
+}
+
+
+#custom-alert {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #4CAF50; /* Xanh lá */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+#custom-alert.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+

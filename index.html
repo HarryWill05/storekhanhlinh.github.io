@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Store Khánh Linh</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="logo.png">
+</head>
+
+
+<body>
+
+  <header>
+    <div class="logo">Store Khánh Linh</div>
+    <nav>
+      <a href="#" id="home-link">Trang chủ</a>
+      <a href="#" id="header-products-link">Sản phẩm</a>
+      <a href="#">Tin Tức</a>
+      <a href="#" id="cart-toggle">🛒 Giỏ hàng <span id="cart-count">0</span></a>
+    </nav>
+  </header>
+
+
+  
+
+  
+
+  <section class="banner">
+    <img src="logo.png" alt="Logo">  
+    <h1>Chào mừng đến với Store Khánh Linh!</h1>
+    <p>Giày xinh - Chính hãng - Giao nhanh</p>
+  </section>
+
+  <section class="banner-slider">
+    <div class="slides">
+        <div class="slide">
+            <img src="https://file.hstatic.net/200000265619/file/1920x600_5__043b56ced10c447dab2256400d3f1300.jpg" alt="Quảng cáo 1">
+            <h2>Khuyến mãi đặc biệt - Giảm 20% toàn bộ sản phẩm!</h2>
+        </div>
+        <div class="slide">
+            <img src="https://i.pinimg.com/736x/fb/26/c6/fb26c6857a13cde8de3c7bb2d5827699.jpg" alt="Quảng cáo 2">
+            <h2>Mua ngay - Giao hàng miễn phí toàn quốc!</h2>
+        </div>
+        <div class="slide">
+            <img src="https://dosi-in.com/images/facebook_brand/136/dosiin-d0b65c5c53657f897af6862c44d8a5e2136526.jpg" alt="Quảng cáo 3">
+            <h2>Giày sneaker hot nhất tuần này!</h2>
+        </div>
+        <div class="slide">
+            <img src="https://futuredeluxe.com/wp-content/uploads/2020/01/converse_twist_01.jpg" alt="Quảng cáo 4">
+            <h2>Mẫu Converse mới nhất!</h2>
+        </div>
+    </div>
+</section>
+
+
+
+<div id="brand-filter-container">
+    <div class="brand-option" data-brand="Nike">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWC6p65HRcgBbuKo4tmCBvu4SmRLWa94A6YA&s" alt="Nike">
+    </div>
+    <div class="brand-option" data-brand="Adidas">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTemwNAtf_se9j3xeaboEVW0uSiQ57mBAfd3w&s" alt="Adidas">
+    </div>
+    <div class="brand-option" data-brand="Vans">
+        <img src="https://jordan1.vn/wp-content/uploads/2023/09/vans-logo-1966-present-700x394_fb38301f3e774652969bcf82e58830d6_1024x1024.png" alt="Vans">
+    </div>
+    <div class="brand-option" data-brand="Converse">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/30/Converse_logo.svg/1024px-Converse_logo.svg.png" alt="Converse">
+    </div>
+    <div class="brand-option" data-brand="Biti's">
+        <img src="https://cdn.haitrieu.com/wp-content/uploads/2022/02/Icon-Bitis.png" alt="Biti's">
+</div>
+
+    
+
+</div>
+
+
+<section id="filtered-products" style="display: none;">
+    <h2 id="brand-title">Sản phẩm của <span></span></h2>
+    <button id="back-to-home">⬅ Quay về trang chủ</button>
+    <div class="products"></div>
+</section>
+
+
+  
+  <section class="product-list">
+    <h2>Sản phẩm nổi bật</h2>
+    <div class="products">
+      
+      <div class="product-card">
+        <a href="product-detail.html?product-name=vans-old-skool">
+          <img src="https://product.hstatic.net/1000382698/product/upload_22d0981f85a34de0b2882340cb38e7c8_master.jpg" alt="Vans">
+        </a>
+        <h3>Vans Old Skool</h3>
+        <p>Giá: 1.200.000đ</p>
+        <div class="buttons">
+          <button class="add-to-cart" data-name="Vans Old Skool" data-price="1200000">🛒 Thêm vào giỏ</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="product-detail.html?product-name=nike-air-force-1">
+            <img src="https://giaysneakerhcm.com/wp-content/uploads/2021/07/giay-nike-air-force-1-low-white-brown-vet-nau-rep-1-1.jpg" alt="Nike">
+        </a>
+        <h3>Nike Air Force 1</h3>
+        <p>Giá: 2.500.000đ</p>
+        <div class="buttons">
+          <button class="add-to-cart" data-name="Nike Air Force 1" data-price="2500000">🛒 Thêm vào giỏ</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="product-detail.html?product-name=adidas-stan-smith">
+          <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/4edaa6d5b65a40d19f20a7fa00ea641f_9366/Giay_Stan_Smith_trang_M20325_01_standard.jpg" alt="Adidas">
+        </a>
+        <h3>Adidas Stan Smith</h3>
+        <p>Giá: 2.000.000đ</p>
+        <div class="buttons">
+          <button class="add-to-cart" data-name="Adidas Stan Smith" data-price="2000000">🛒 Thêm vào giỏ</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="product-detail.html?product-name=converse-chunk-70">
+            <img src="https://www.converse.vn/media/catalog/product/0/8/0882-CONA00916C005003-1.jpg" alt="Converse">
+        </a>
+        <h3>Converse Chuck 70</h3>
+        <p>Giá: 1.800.000đ</p>
+        <div class="buttons">
+          <button class="add-to-cart" data-name="Converse Chuck 70" data-price="1800000">🛒 Thêm vào giỏ</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="product-detail.html?product-name=nike-dunk-low">
+          <img src="https://product.hstatic.net/1000361048/product/dd1391_104_c_f3e15e398fe44a6ab05e23396168ccc9_master.jpg" alt="Nike">
+        </a>
+        <h3>Nike Dunk Low</h3>
+        <p>Giá: 3.200.000đ</p>
+        <div class="buttons">
+          <button class="add-to-cart" data-name="Nike Dunk Low" data-price="3200000">🛒 Thêm vào giỏ</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="product-detail.html?product-name=adidas-superstar">
+          <img src="https://assets.adidas.com/images/w_600,f_auto,q_auto/7ed0855435194229a525aad6009a0497_9366/Superstar_Shoes_White_EG4958_01_00_standard.jpg" alt="Adidas">
+        </a>
+        <h3>Adidas Superstar</h3>
+        <p>Giá: 1.900.000đ</p>
+        <div class="buttons">
+          <button class="add-to-cart" data-name="Adidas Superstar" data-price="1900000">🛒 Thêm vào giỏ</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="product-detail.html?product-name=biti's-hunter-nam">
+          <img src="https://cdn.chiaki.vn/unsafe/0x960/left/top/smart/filters:quality(75)/https://chiaki.vn/upload/product/2024/05/giay-the-thao-nam-biti-s-hunter-x-liteplex-dsmh09800-den-39-p114298-664b0ed214a9d-20052024155026.png" alt="Biti's">
+        </a>
+        <h3>Biti's Hunter Nam</h3>
+        <p>Giá: 800.000đ</p>
+        <div class="buttons">
+          <button class="add-to-cart" data-name="Biti's Hunter Nam" data-price="800000">🛒 Thêm vào giỏ</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="product-detail.html?product-name=converse-all-star-low">
+          <img src="https://product.hstatic.net/200000265619/product/121178-1_7ae11c7ec1b44e70b4689c4c3f063087_1024x1024.jpg" alt="Converse">
+        </a>
+        <h3>Converse All Star Low</h3>
+        <p>Giá: 1.200.000đ</p>
+        <div class="buttons">
+          <button class="add-to-cart" data-name="Converse All Star Low" data-price="1200000">🛒 Thêm vào giỏ</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="product-detail.html?product-name=vans-knu-skool">
+          <img src="https://bizweb.dktcdn.net/thumb/1024x1024/100/140/774/products/giay-vans-knu-skool-black-true-white-vn0009qc6bt-1.jpg?v=1726130441123" alt="Vans">
+        </a>
+        <h3>Vans Knu Skool</h3>
+        <p>Giá: 2.160.000đ</p>
+        <div class="buttons">
+          <button class="add-to-cart" data-name="Vans Knu Skool" data-price="2160000">🛒 Thêm vào giỏ</button>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <a href="product-detail.html?product-name=biti's-hunter-nu">
+          <img src="https://salt.tikicdn.com/ts/product/b7/86/b2/d91e4a82165051d4cfc04c36623891b3.jpg" alt="Biti's">
+        </a>
+        <h3>Biti's Hunter Nữ</h3>
+        <p>Giá: 620.000đ</p>
+        <div class="buttons">
+          <button class="add-to-cart" data-name="Biti's Hunter Nữ" data-price="620000">🛒 Thêm vào giỏ</button>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <button id="all-products-btn">🛍️ Tất cả sản phẩm</button>
+
+  <section id="all-products-section" style="display: none;">
+    <h2>Sản phẩm</h2>
+    <div class="products"></div>
+  </section>
+
+  <div id="cart-container">
+    <h2>🛒 Giỏ hàng của bạn</h2>
+    <div id="cart-items-container">
+        <!-- Danh sách sản phẩm trong giỏ hàng -->
+    </div>
+    <div class="cart-total">
+        <p><strong>Tổng cộng:</strong> <span id="cart-total-price">0₫</span></p>
+    </div>
+    <div class="cart-buttons">
+        <button id="view-cart">📂 Xem giỏ hàng</button>
+        <button id="checkout">💳 Thanh toán</button>
+    </div>
+    <button id="continue-shopping">🔄 Tiếp tục mua hàng</button>
+</div>
+
+
+  <div id="blur-overlay" class="blur-overlay"></div>
+
+
+
+
+  <script src="script.js"></script>
+
+  <footer>
+    <div class="footer-container">
+        <!-- Giới thiệu -->
+        <div class="footer-section">
+            <h3>Giới thiệu</h3>
+            <p>Chào mừng bạn đến với Store Khánh Linh! Chúng tôi tự hào mang đến những mẫu sneaker chất lượng, chính hãng, giúp bạn thể hiện phong cách riêng biệt. Không chỉ là giày, đó là cá tính, là sự thoải mái và là lựa chọn hoàn hảo cho từng bước đi của bạn!</p>
+
+        </div>
+
+        <!-- Địa chỉ -->
+        <div class="footer-section">
+            <h3>Địa chỉ</h3>
+            <p>Khu bê tông Hải Bối - Đông Anh - Hà Nội</p>
+            <p>SĐT: 0359924809</p>
+            <p>Email: storekhanhlinh@gmail.com</p>
+        </div>
+
+        <!-- Menu -->
+        <div class="footer-section">
+            <h3>Menu</h3>
+            <ul>
+                <li><a href="#">Trang chủ</a></li>
+                <li><a href="#">Cửa hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Giới thiệu</a></li>
+                <li><a href="#">Tin tức</a></li>
+            </ul>
+        </div>
+
+        <!-- Mạng xã hội -->
+        <div class="footer-section">
+            <h3>Mạng xã hội</h3>
+            <div class="social-icons">
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/b9/2023_Facebook_icon.svg/2048px-2023_Facebook_icon.svg.png" alt="Facebook"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram"></a>
+                <a href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Twitter-new-logo.jpg/1024px-Twitter-new-logo.jpg" alt="Twitter"></a>
+                <a href="#"><img src="https://inkythuatso.com/uploads/thumbnails/800/2021/11/logo-tiktok-inkythuatso-2-mesa-de-trabajo-1-27-09-13-05.jpg" alt="TikTok"></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+
+  <footer>
+    <p>&copy; 2025 Store Khánh Linh. All rights reserved.</p>
+  </footer>
+
+  <a href="https://m.me/[TÊN_TRANG_FACEBOOK]" target="_blank" id="messenger-icon">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/63/Facebook_Messenger_logo_2025.svg/2048px-Facebook_Messenger_logo_2025.svg.png" alt="Messenger">
+</a>
+
+<div id="custom-alert" class="hidden">
+    <p id="alert-message"></p>
+</div>
+
+
+</body>
+</html>

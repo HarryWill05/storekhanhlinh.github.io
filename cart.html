@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Giỏ hàng</title>
+    <link rel="stylesheet" href="cart.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>🛒 Giỏ hàng của bạn</h1>
+        <a href="index.html">⬅️ Tiếp tục mua sắm</a>
+    </header>
+
+    <main>
+        <div class="cart-container">
+            <div id="cart-items"></div> <!-- Danh sách sản phẩm -->
+            <div class="cart-summary">
+                <input type="text" id="discount-code" placeholder="Nhập mã ưu đãi">
+                <button id="apply-discount">Áp dụng</button>
+                <h3>Tổng: <span id="cart-total-price">0₫</span></h3>
+                <button id="checkout">💳 Thanh toán</button>
+            </div>
+        </div>
+
+        
+
+
+    </main>
+
+    <script src="cart.js"></script>
+</body>
+</html>
